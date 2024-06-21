@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
+/* ESTILO GERAL*/
 *{
 margin: 0;
 padding: 0;
@@ -11,14 +12,29 @@ font-family: "Poppins", sans-serif;
 body{
     overflow: hidden;
 }
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+display: flex;
+}
+/*HEADER*/
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     max-width: 100%;
     align-items: center;
-    text-align: center;
     padding-top: 1rem;
     position: relative;
+}
+
+header {
+    background-color: #78cece;
+    padding: 25px 0;
+    text-align: center;
 }
 
 .cabeçalho-link{
@@ -51,34 +67,58 @@ button:hover{
     color: white;
     transition: 0.5s;
 }
-.container-text{
-    padding: 150px 0 0 130px;
+/* ESTILO DO TOPO DO SITE*/
+section.topo-do-site{
+    padding: 50px 30%;
 }
 
-.text h3{
+section.topo-do.site .flex{
+    align-items: center;
+    justify-content: center;
+}
+
+.text-topo-site{
+    width: 100%;
+}
+
+.topo-do-site h3{
     font-size: 15px;
 }
 
-.text h1{
+.topo-do-site h1{
     margin-top: 10px;
 }
 
-.text span{
-    color: grey;
-}
-
-.text p{
+.topo-do-site p{
     font-weight: 300;
     margin-top: 10px;
 }
 
-header {
-    background-color: #78cece;
-    padding: 25px 0;
-    text-align: center;
+.topo-do-site span{
+    color: #179999;
 }
 
+img{
+    width: 400px;
+    margin-left: 25%;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 1s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+    top: 0;
+}
+100%{
+    top: 15px
+}
+}
+/*FOOTER*/
 footer{
     position: absolute;
     background-color: #179999;
@@ -87,14 +127,14 @@ footer{
     text-align: center;
     bottom: 0px;
     width: 100%;
-    height: 13%;
+    height: 15%;
 }
 
 #footer_social_media{
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 0rem;
 }
 
 #footer_social_media .footer-link{
@@ -120,16 +160,7 @@ footer{
 background-color: #25d366;
 }
 
-#footer_copyright{
-    display: flex;
-    justify-content: center;
-    background-color: #179999;
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
-}
-
-
+/*FEEDBACK*/
 .centralizar{
     width: 100%;
     height: 100vh;
@@ -140,18 +171,17 @@ background-color: #25d366;
 }
 
 form{
-    width: 350px;
-    height: 45%;
-    border-radius: 3px;
+    width: 400px;
+    height: 55%;
     background-color: white;
-    padding: 20px;
-    border-radius: 5%;
+    padding: 25px;
+    border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 form h1{
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 50px;
 }
 
 form .area-input{
@@ -161,7 +191,7 @@ justify-content: center;
 width: 100%;
 position: relative;
 height: 35px;
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 
 form .area-input label{
@@ -236,13 +266,29 @@ form button{
     color: white;
 }
 
-.text-2{
-    width: 40%;
-    letter-spacing: 1px;
-    color: rgb(109, 109, 109);
+/*table*/
+table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 39vw;
 }
 
+table, th,td{
+    border: 1px solid #78cece;
+    border-collapse: collapse;
+    width: 100%;
+    height: 40px;
+    padding: 10px 50px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
 
+th{
+    background-color: #78cece;
+}
 
-
-
+tr:hover{
+    background-color: #78cece;
+    color: #fff;
+}
